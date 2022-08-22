@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/chief/Documents/GitHub/frontend-project-44'
+npm ci
+make: Leaving directory `/Users/chief/Documents/GitHub/frontend-project-44'
+ 
