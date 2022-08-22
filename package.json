@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "hexly teacher wya",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,8 +17,10 @@
     "url": "https://github.com/latnikou/frontend-project-44/issues"
   },
   "homepage": "https://github.com/latnikou/frontend-project-44#readme",
-  "type":"module",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
