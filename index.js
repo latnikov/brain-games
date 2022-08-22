@@ -10,7 +10,6 @@ export const welcomeUser = () => {
   return name;
 };
 
-
 export const answerComparison = (userName, getAnswers) => {
   const [userAnswer, correctAnswer] = getAnswers();
   if (String(userAnswer) !== String(correctAnswer)) {
@@ -44,6 +43,13 @@ export function generateRandomNumber(min, max) {
   // получить случайное число от (min-0.5) до (max+0.5)
   const rand = min - 0.5 + Math.random() * (max - min + 1);
   return Math.round(rand);
+}
+
+export function gcd(a, b) {
+  if (!b) {
+    return a;
+  }
+  return gcd(b, a % b);
 }
 
 export default generateRandomNumber;
