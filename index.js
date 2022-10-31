@@ -10,6 +10,15 @@ export const welcomeUser = () => {
   return name;
 };
 
+export function isPrime(n) {
+  if (n <= 1)
+    return false;
+    for (let i = 2; i < n; i++)
+        if (n % i == 0)
+            return false;
+    return true;
+}
+
 export const answerComparison = (userName, getAnswers) => {
   const [userAnswer, correctAnswer] = getAnswers();
   if (String(userAnswer) !== String(correctAnswer)) {
@@ -50,6 +59,18 @@ export function gcd(a, b) {
     return a;
   }
   return gcd(b, a % b);
+}
+
+export function createProgression() {
+  const step = generateRandomNumber(0, 10);
+  const progression = [];
+  for (let i = 0; i < 100; i += step) {
+    progression.push(i);
+    if (progression.length > 15) {
+      break
+    }
+  }
+  return progression;
 }
 
 export default generateRandomNumber;

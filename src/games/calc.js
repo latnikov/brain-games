@@ -1,4 +1,4 @@
-import { newGame, generateRandomNumber, askQuestion, } from '../../index.js';
+import { newGame, generateRandomNumber, askQuestion } from '../../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 
@@ -7,8 +7,14 @@ export const calculate = newGame(() => {
   const secondNumber = generateRandomNumber(1, 12);
   const operators = ['*', '-', '+'];
   const operation = operators[generateRandomNumber(0, 2)];
-  const correctAnswer = (operation == '*') ? firstNumber * secondNumber: (operation == '+') ? firstNumber+secondNumber: firstNumber - secondNumber;
-
+  let correctAnswer;
+  if (operation === '*') {
+    correctAnswer = firstNumber * secondNumber;
+  } else if (operation === '+') {
+    correctAnswer = firstNumber + secondNumber;
+  } else {
+    correctAnswer = firstNumber - secondNumber;
+  }
   const theExpression = `${firstNumber} ${operation} ${secondNumber}`;
 
   const userAnswer = askQuestion(`Question: ${theExpression}`);
