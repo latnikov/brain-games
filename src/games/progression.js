@@ -6,7 +6,7 @@ export const calculateProgression = newGame(() => {
   const progression = createProgression();
   const ind = Math.floor(Math.random() * progression.length);
   const correctAnswer = progression[ind];
-  progression[ind] = '...';
+  progression[ind] = '..';
   const userAnswer = askQuestion(`Question: ${progression.join(' ')}`);
   return [userAnswer, correctAnswer];
 }, gameDescription);
