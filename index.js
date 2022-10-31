@@ -11,12 +11,15 @@ export const welcomeUser = () => {
 };
 
 export function isPrime(n) {
-  if (n <= 1)
+  if (n <= 1) {
     return false;
-    for (let i = 2; i < n; i++)
-        if (n % i == 0)
-            return false;
-    return true;
+  }
+  for (let i = 2; i < n; i += 1) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export const answerComparison = (userName, getAnswers) => {
@@ -67,7 +70,7 @@ export function createProgression() {
   for (let i = 0; i < 100; i += step) {
     progression.push(i);
     if (progression.length > 15) {
-      break
+      break;
     }
   }
   return progression;
