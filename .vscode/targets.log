@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Oct 31 17:26:12 2022
+# Make data base, printed on Wed Nov  2 14:05:35 2022
 
 # Variables
 
@@ -59,7 +59,7 @@ VSCODE_CODE_CACHE_PATH = /home/chief/.config/Code/CachedData/d045a5eda657f4d7b67
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.XEAOU1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.3VCDV1
 # default
 .LOADED := 
 # default
@@ -93,13 +93,13 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 86871
+VSCODE_PID = 41344
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1775,unix/unix:/tmp/.ICE-unix/1775
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1770,unix/unix:/tmp/.ICE-unix/1770
 # automatic
 *F = $(notdir $*)
 # environment
@@ -137,7 +137,7 @@ LC_MONETARY = ru_RU.UTF-8
 # environment
 LC_TIME = ru_RU.UTF-8
 # environment
-INVOCATION_ID = 4062dd4ace9c410d9990592765b55de2
+INVOCATION_ID = dd0089ad08984a61a86e7ef10705cead
 # environment
 USERNAME = chief
 # environment
@@ -161,7 +161,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := install
 # environment
-SYSTEMD_EXEC_PID = 1833
+SYSTEMD_EXEC_PID = 1823
 # environment
 HISTCONTROL = ignoredups
 # environment
@@ -173,7 +173,7 @@ USER = chief
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1664
+MANAGERPID = 1655
 # environment
 which_declare = declare -f
 # environment
@@ -181,7 +181,7 @@ LC_MEASUREMENT = ru_RU.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 86871
+GIO_LAUNCHED_DESKTOP_FILE_PID = 41344
 # environment
 _ = /usr/bin/make
 # environment
@@ -189,7 +189,7 @@ LC_PAPER = ru_RU.UTF-8
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:35205
+JOURNAL_STREAM = 8:29463
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -253,7 +253,6 @@ Makefile:
 #  Last modified 2022-10-31 16:01:03.466963717
 #  File has been updated.
 #  Successfully updated.
- 
 
 # Not a target:
 .DEFAULT:
@@ -296,6 +295,6 @@ install:
 # strcache performance: lookups = 32 / hit rate = 25%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Mon Oct 31 17:26:12 2022
+# Finished Make data base on Wed Nov  2 14:05:35 2022
 
  
