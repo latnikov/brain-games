@@ -1,12 +1,15 @@
-import { newGame, generateRandomNumber, askQuestion } from '../../index.js';
+import { gameLaunch } from '../../index.js';
+import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export const startEvenGame = newGame(() => {
+const isEven = (num) => num % 2 === 0;
+
+export const startEvenGame = gameLaunch(() => {
   const secretNumber = generateRandomNumber(1, 100);
-  const correctAnswer = secretNumber % 2 === 0 ? 'yes' : 'no';
-  const userAnswer = askQuestion(`Question: ${secretNumber}`);
-  return [userAnswer, correctAnswer];
+  const question = `${secretNumber}`;
+  const correctAnswer = isEven(secretNumber) ? 'yes' : 'no';
+  return [question, correctAnswer];
 }, gameDescription);
 
 export default startEvenGame;
