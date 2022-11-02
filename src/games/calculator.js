@@ -2,7 +2,7 @@ import { newGame, generateRandomNumber, askQuestion } from '../../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-export const calculate = newGame(() => {
+export const startCalcGame = newGame(() => {
   const firstNumber = generateRandomNumber(1, 12);
   const secondNumber = generateRandomNumber(1, 12);
   const operators = ['*', '-', '+'];
@@ -22,4 +22,4 @@ export const calculate = newGame(() => {
   return [userAnswer, correctAnswer];
 }, gameDescription);
 
-export default calculate;
+export default startCalcGame;

@@ -2,7 +2,7 @@ import { newGame, createProgression, askQuestion } from '../../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-export const calculateProgression = newGame(() => {
+export const startProgressionGame = newGame(() => {
   const progression = createProgression();
   const ind = Math.floor(Math.random() * progression.length);
   const correctAnswer = progression[ind];
@@ -11,4 +11,4 @@ export const calculateProgression = newGame(() => {
   return [userAnswer, correctAnswer];
 }, gameDescription);
 
-export default calculateProgression;
+export default startProgressionGame;
