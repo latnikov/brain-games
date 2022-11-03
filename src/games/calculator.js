@@ -4,18 +4,14 @@ import { generateRandomNumber } from '../helpers.js';
 const gameDescription = 'What is the result of the expression?';
 
 const calc = (a, b, operation) => {
-  let answer;
   switch (operation) {
     case '*':
-      answer = a * b;
-      break;
+      return a * b;
     case '+':
-      answer = a + b;
-      break;
+      return a + b;
     default:
-      answer = a - b;
+      return a - b;
   }
-  return answer;
 };
 
 export const startCalcGame = gameLaunch(() => {
