@@ -3,7 +3,7 @@ import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const getAnswer = (a, b, operation) => {
+const calc = (a, b, operation) => {
   let answer;
   switch (operation) {
     case '*':
@@ -23,7 +23,7 @@ export const startCalcGame = gameLaunch(() => {
   const secondNumber = generateRandomNumber(1, 12);
   const operators = ['*', '-', '+'];
   const operation = operators[generateRandomNumber(0, operators.length - 1)];
-  const correctAnswer = getAnswer(firstNumber, secondNumber, operation);
+  const correctAnswer = calc(firstNumber, secondNumber, operation);
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   return [question, correctAnswer];
 }, gameDescription);
