@@ -17,10 +17,10 @@ export const startProgressionGame = gameLaunch(() => {
   const length = generateRandomNumber(6, 15);
   const progression = getProgression(firstNumber, step, length);
   const index = generateRandomNumber(0, progression.length);
-  const correctAnswer = progression[index];
+  const answer = String(progression[index]);
   progression[index] = '..';
   const question = progression.join(' ');
-  return [question, correctAnswer];
+  return [question, answer];
 }, gameDescription);
 
 export default startProgressionGame;

@@ -16,10 +16,10 @@ export const isPrime = (n) => {
 };
 
 export const startPrimeGame = gameLaunch(() => {
-  const secretNumber = generateRandomNumber(0, 100);
-  const correctAnswer = isPrime(secretNumber) ? 'yes' : 'no';
-  const question = `${secretNumber}`;
-  return [question, correctAnswer];
+  const number = generateRandomNumber(0, 100);
+  const answer = isPrime(number) ? 'yes' : 'no';
+  const question = `${number}`;
+  return [question, answer];
 }, gameDescription);
 
 export default startPrimeGame;

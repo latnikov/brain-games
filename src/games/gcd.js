@@ -14,11 +14,11 @@ export const startGcdGame = gameLaunch(() => {
   const firstNumber = generateRandomNumber(1, 100);
   const secondNumber = generateRandomNumber(1, 100);
 
-  const correctAnswer = getDivider(firstNumber, secondNumber);
+  const answer = String(getDivider(firstNumber, secondNumber));
 
   const question = `${firstNumber} ${secondNumber}`;
 
-  return [question, correctAnswer];
+  return [question, answer];
 }, gameDescription);
 
 export default startGcdGame;

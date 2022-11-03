@@ -19,9 +19,9 @@ export const startCalcGame = gameLaunch(() => {
   const secondNumber = generateRandomNumber(1, 12);
   const operators = ['*', '-', '+'];
   const operation = operators[generateRandomNumber(0, operators.length - 1)];
-  const correctAnswer = calc(firstNumber, secondNumber, operation);
+  const answer = String(calc(firstNumber, secondNumber, operation));
   const question = `${firstNumber} ${operation} ${secondNumber}`;
-  return [question, correctAnswer];
+  return [question, answer];
 }, gameDescription);
 
 export default startCalcGame;
