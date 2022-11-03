@@ -1,4 +1,4 @@
-import { gameLaunch } from '../../index.js';
+import { launchGame } from '../../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -15,11 +15,13 @@ export const isPrime = (n) => {
   return true;
 };
 
-export const startPrimeGame = gameLaunch(() => {
+const generateRound = () => {
   const number = generateRandomNumber(0, 100);
   const answer = isPrime(number) ? 'yes' : 'no';
   const question = `${number}`;
   return [question, answer];
-}, gameDescription);
+};
+
+export const startPrimeGame = launchGame(generateRound, gameDescription);
 
 export default startPrimeGame;

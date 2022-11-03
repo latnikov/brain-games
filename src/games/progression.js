@@ -1,4 +1,4 @@
-import { gameLaunch } from '../../index.js';
+import { launchGame } from '../../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'What number is missing in the progression?';
@@ -11,7 +11,7 @@ function getProgression(start, step, length) {
   return progression;
 }
 
-export const startProgressionGame = gameLaunch(() => {
+const generateRound = () => {
   const firstNumber = generateRandomNumber(0, 50);
   const step = generateRandomNumber(2, 8);
   const length = generateRandomNumber(6, 15);
@@ -21,6 +21,8 @@ export const startProgressionGame = gameLaunch(() => {
   progression[index] = '..';
   const question = progression.join(' ');
   return [question, answer];
-}, gameDescription);
+};
+
+export const startProgressionGame = launchGame(generateRound, gameDescription);
 
 export default startProgressionGame;

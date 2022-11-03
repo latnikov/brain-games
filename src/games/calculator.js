@@ -1,4 +1,4 @@
-import { gameLaunch } from '../../index.js';
+import { launchGame } from '../../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'What is the result of the expression?';
@@ -14,7 +14,7 @@ const calc = (a, b, operation) => {
   }
 };
 
-export const startCalcGame = gameLaunch(() => {
+const generateRound = () => {
   const firstNumber = generateRandomNumber(1, 12);
   const secondNumber = generateRandomNumber(1, 12);
   const operators = ['*', '-', '+'];
@@ -22,6 +22,8 @@ export const startCalcGame = gameLaunch(() => {
   const answer = String(calc(firstNumber, secondNumber, operation));
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   return [question, answer];
-}, gameDescription);
+};
+
+export const startCalcGame = launchGame(generateRound, gameDescription);
 
 export default startCalcGame;
