@@ -1,4 +1,4 @@
-import { launchGame } from '../../index.js';
+import { launchGame } from '../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';

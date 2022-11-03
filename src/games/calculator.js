@@ -1,9 +1,9 @@
-import { launchGame } from '../../index.js';
+import { launchGame } from '../index.js';
 import { generateRandomNumber } from '../helpers.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const calc = (a, b, operation) => {
+const calculate = (a, b, operation) => {
   switch (operation) {
     case '*':
       return a * b;
@@ -19,7 +19,7 @@ const generateRound = () => {
   const secondNumber = generateRandomNumber(1, 12);
   const operators = ['*', '-', '+'];
   const operation = operators[generateRandomNumber(0, operators.length - 1)];
-  const answer = String(calc(firstNumber, secondNumber, operation));
+  const answer = String(calculate(firstNumber, secondNumber, operation));
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   return [question, answer];
 };
